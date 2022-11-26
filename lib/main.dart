@@ -14,7 +14,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp();
   await FirebaseMessaging.instance.getInitialMessage();
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   SystemChrome.setPreferredOrientations([
@@ -45,24 +45,7 @@ class _MyAppState extends ConsumerState<MyApp> {
         primarySwatch: Colors.blue,
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: ref.watch(userDataControllerProvider).when(
-            data: (user) {
-              if (user == null) {
-                print("user is null in main");
-                return const OTPScreen();
-              } else {
-                // to be written correct code
-              }
-            },
-            error: (err, trace) {},
-            loading: () {
-              return const Scaffold(
-                body: Center(
-                  child: CircularProgressIndicator(),
-                ),
-              );
-            },
-          ),
+      // home: // to be discussed...
       // home: const TestScreen(),
     );
   }
