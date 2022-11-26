@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:foods_matters/auth/screens/otp_verification_screen.dart';
-import 'package:foods_matters/common/global_constant.dart';
+import 'package:foods_matters/common/global_constants.dart';
 import 'package:foods_matters/common/utils/show_snackbar.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';

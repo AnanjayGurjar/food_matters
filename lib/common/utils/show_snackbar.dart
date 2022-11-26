@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:foods_matters/common/global_constant.dart';
+import 'package:foods_matters/common/global_constants.dart';
 
 void ShowSnakBar({required BuildContext context, required String content}) {
   ScaffoldMessenger.of(context).showSnackBar(
