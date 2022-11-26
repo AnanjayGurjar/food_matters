@@ -91,6 +91,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+  #to be included as error happening
     - images/loginui.png
     - images/splash.png
     - images/no_image.png
@@ -107,7 +108,7 @@ flutter:
     - assets/provide.json
     - assets/search.json
     - assets/waiting.json
-  #   - images/a_dot_ham.jpeg
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
