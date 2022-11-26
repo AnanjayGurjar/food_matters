@@ -45,6 +45,29 @@ class _MyAppState extends ConsumerState<MyApp> {
         primarySwatch: Colors.blue,
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
+       ref.watch(userDataControllerProvider).when(
+            data: (user) {
+              if (user == null) {
+                print("user is null in main");
+                return const OTPScreen();
+              } else {
+                print("user is not null in main");
+                if (user.userType == "Consumer") {
+                  return const C_BottomBar();
+                } else {
+                  return const P_BottomBar();
+                }
+              }
+            },
+            error: (err, trace) {},
+            loading: () {
+              return const Scaffold(
+                body: Center(
+                  child: CircularProgressIndicator(),
+                ),
+              );
+            },
+          ),
       // home: // to be discussed...
       // home: const TestScreen(),
     );
