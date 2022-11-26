@@ -1,4 +1,4 @@
-name: food_matters
+name: foods_matters
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -36,10 +36,40 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  google_fonts: ^3.0.1
+  lottie: ^2.0.0
+  pin_code_fields: ^7.4.0
+  firebase_core: ^2.2.0
+  firebase_auth: ^4.1.2
+  flutter_riverpod: ^2.1.1
+  introduction_screen: ^3.0.2
+  riverpod_annotation: ^1.0.4
+  firebase_messaging: ^14.1.0
+  flutter_local_notifications: ^12.0.3
+  dio: ^4.0.6
+  logger: ^1.1.0
+  image_picker: ^0.8.6
+  http: ^0.13.5
+  shared_preferences: ^2.0.15
+  anim_search_bar: ^2.0.2
+  geolocator: ^9.0.2
+  badges: ^2.0.3
+  simple_gradient_text: ^1.2.4
+  toggle_switch: ^2.0.1
+  textfield_tags: ^2.0.2
+  loader_overlay: ^2.1.0
+  font_awesome_flutter: ^10.2.1
+  animations: ^2.0.7
+  flutter_staggered_animations: ^1.1.1
+  flutter_phone_direct_caller: ^2.1.1
+  animated_text_kit: ^4.2.2
+  google_maps_flutter: ^2.2.1
+  socket_io_client: ^2.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+    
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -60,8 +90,23 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - images/loginui.png
+    - images/splash.png
+    - images/no_image.png
+    - images/coin1.png
+    - images/coin2.png
+    - images/coin3.png
+    - assets/l1.json
+    - assets/l2.json
+    - assets/l3.json
+    - assets/l4.json
+    - assets/l5.json
+    - assets/l6.json
+    - assets/share.json
+    - assets/provide.json
+    - assets/search.json
+    - assets/waiting.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
