@@ -5,10 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:foods_matters/auth/controller/auth_controller.dart';
 import 'package:foods_matters/auth/screens/otp_screen.dart';
 import 'package:foods_matters/common/utils/show_snackbar.dart';
-import 'package:foods_matters/route/features/user_services/repository/user_services_repository.dart';
 import 'package:foods_matters/route/features/user_services/screens/common/user_registration.dart';
-import 'package:foods_matters/route/widgets/hostel/p_bottom_bar.dart';
-import 'package:foods_matters/route/widgets/ngo/c_bottom_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:lottie/lottie.dart';
@@ -41,37 +38,6 @@ class _OTPVerificationScreenState extends ConsumerState<OTPVerificationScreen> {
         );
     print(resStatus);
     if (resStatus == 200) {
-      final user = await ref.watch(userRepositoryProvider).getUserData();
-      if (user != null) {
-        // ignore: use_build_context_synchronously
-        if (user.userType == "Consumer") {
-          Navigator.pushNamedAndRemoveUntil(
-            context,
-            C_BottomBar.routeName,
-            (route) => false,
-          );
-        } else {
-          Navigator.pushNamedAndRemoveUntil(
-            context,
-            P_BottomBar.routeName,
-            (route) => false,
-          );
-        }
-      } else {
-        print("null hoon main");
-        Navigator.pushNamedAndRemoveUntil(
-          context,
-          OTPScreen.routeName,
-          (route) => false,
-        );
-      }
-    } else if (resStatus == 401) {
-      print("chal bhai register ker le");
-      Navigator.pushNamed(
-        context,
-        RegistrationScreen.routeName,
-      );
-    } else if (resStatus == 404) {
       print("null hoon main");
       Navigator.pushNamedAndRemoveUntil(
         context,
