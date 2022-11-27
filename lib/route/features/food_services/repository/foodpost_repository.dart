@@ -27,14 +27,6 @@ class FoodPostRepository {
     }
     return null;
   }
-
-  // final User pushedBy;
-  // final bool isAvailable;
-  // final List<String> food;
-  // final num foodQuantity;
-  // final String foodType;
-  // final num foodLife;
-  // final String photo;
   Future<int> addFoodPost({
     required String pushedBy,
     required bool isAvailable,
