@@ -1,16 +1,40 @@
 # food_matters
 
-A new Flutter project.
+A project which aims to help those who deliver smile daily.
 
-## Getting Started
+## Getting Started / Installation
 
-This project is a starting point for a Flutter application.
+clone or download the code using :
+```shell
+git clone
+```
 
-A few resources to get you started if this is your first Flutter project:
+## running the backend
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Head to /lib/server run 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```shell
+npm install
+```
+to get all the libraries
+
+```shell
+npm run dev
+npm start
+```
+
+## running the frontend
+
+In the root directory of the project use 
+
+```shell
+flutter pub get
+```
+to get all the necessary dependency
+
+Lastly use
+```shell
+flutter run
+```
+to run the app
+
